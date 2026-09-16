@@ -3,6 +3,8 @@
 
 > **Core Axiom:** If the founder cannot sell the vision, no hired sales representative can. Founder-led sales is a learning engine designed to codify the repeatable motion before scaling headcount.
 
+> **Attribution & Source Credit:** Adapted from the **Sales** framework series authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/) (*Founder Led Sales*, *Awareness Playbook*, *Direct Sales ToFu*, *Sales Pre-Objections*, *Chasing Product Market Fit*, *Product Led Growth*, *StartUp SaaS Pricing*, and *Hold The Line*), with PMF survey benchmarks from Sean Ellis. See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. Founder-Led Sales: The Outbound Engine

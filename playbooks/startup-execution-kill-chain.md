@@ -3,6 +3,8 @@
 
 > **Core Axiom:** Hard work without operational closure is motion theater. High-performing founders do not merely iterate in circles; they close the loop and execute to completion.
 
+> **Attribution & Source Credit:** Adapted from **The Kill Chain of Startup Execution (F2T2EA)** framework authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/extras/the-kill-chain-of-startup-execution-framework/), combined with military decision-loop doctrine from Col. John Boyd (*OODA Loop*). See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. OODA Loop vs. F2T2EA: The Two Gears of Execution

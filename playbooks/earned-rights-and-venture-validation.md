@@ -4,6 +4,8 @@
 > **"You do not have the right to scale before you have the right to sell. You do not have the right to sell before you have the right to build. And you do not have the right to build before you have proved that someone is bleeding."**  
 > — The Earned Rights Principle
 
+> **Attribution & Source Credit:** Adapted from the **Starting** framework series authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/) (*Earn The Right*, *There Is No Money*, *Extreme Uncertainty*, *Think Big Work Small / OPPM*, and *Becoming Core*). See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. The "Earn The Right" (ETR) Framework

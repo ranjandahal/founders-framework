@@ -3,6 +3,8 @@
 
 > **Core Axiom:** You do not earn the right to write code until you have validated acute, existing pain. Building without verified customer agony is startup theater.
 
+> **Attribution & Source Credit:** Adapted from the **Problem** framework series authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/) (*Validate the Problem*, *Problem Impact Analysis*, *Startup Value Chain*, *Solution First Glance*, *Minimum Delightful Product*, *The 5 Pillars of User Journey*, and *Startup Founder Tribe*). See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. Problem Validation: Hunting Agony, Not Politeness

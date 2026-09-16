@@ -3,6 +3,8 @@
 
 > **Core Axiom:** Software volume is a liability, not an asset. Every line of code must defend its existence against a measurable customer outcome.
 
+> **Attribution & Source Credit:** Adapted from the **Product** framework series authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/) (*Outcome Driven Design*, *An AI First Strategy*, *Tech Commandments*, *Observability Stack*, *The Golden Handshake*, *Product To Service*, *StartUp Pivot*, and *Create Problems*). See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. Outcome-Driven Design (ODD): Beyond Feature Factories

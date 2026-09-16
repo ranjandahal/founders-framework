@@ -3,6 +3,8 @@
 
 > **Core Axiom:** A huge TAM is the refuge of a weak narrative. Real market dominance starts with a microscopic, uncontested beachhead where you are the only credible choice.
 
+> **Attribution & Source Credit:** Adapted from the **Market** framework series authored by **James Sinclair** at [Startup to Scaleup](https://www.startuptoscaleup.com/startup-frameworks/) (*StartUp Market Sizing*, *Navigating Your Market*, *Your Atomic ICP*, *Activating Your ICP 5:5:5*, *Ecosystem Mapping*, *Minimum Viable Offering*, and *Leadership Principles*), with classical strategy foundations from W. Chan Kim & Renée Mauborgne (*Blue Ocean Strategy / ERRC*) and Michael E. Porter (*Five Forces*). See [`ATTRIBUTION.md`](../ATTRIBUTION.md) for full citations.
+
 ---
 
 ## 1. Bottom-Up Market Sizing: Reality vs. Fantasy

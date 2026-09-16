@@ -4,6 +4,7 @@
 > **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)  
 > **Audience:** Early-Stage Startup Founders, Co-Founders, Board Advisors, Accelerators, and Venture Investors  
 > **Companion Blueprint:** [Universal Founder Equity & Operating Framework (UEOF)](./universal-founder-equity-and-operating-framework.md)  
+> **Source Attributions:** See [ATTRIBUTION.md](../ATTRIBUTION.md) for full citations of foundational literature and modern framework libraries.  
 > **Status:** Open Community Framework & Operating Blueprint  
 > **Purpose:** Eliminate ambiguity, align equity with value creation, establish Single-Threaded Ownership (STO), and provide an objective standard for evaluating founder impact.
 

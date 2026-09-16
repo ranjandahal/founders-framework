@@ -159,7 +159,18 @@ Modern AI coding agents (such as Google Antigravity, Claude Code, or Cursor) can
 
 ---
 
-## 7. Open Source Licensing & Community Contributions
+## 7. Acknowledgements & Source Attribution
+
+The Universal Founder Framework synthesizes battle-tested startup methodologies into open-source governance playbooks, mathematical equity models, and automated engineering audit tools. We believe in radical intellectual honesty and giving full, unambiguous credit to our sources:
+
+* **Primary Modern Frameworks Source:** Many of the startup stage paradigms across our playbooks—including *Earn The Right*, *Problem Impact Analysis*, *Startup Value Chain*, *Atomic ICP*, *5:5:5 Cold Outreach*, *Outcome-Driven Design*, *Tech Commandments*, *Observability Stack*, *SaaS Pricing Strategy*, and *The Kill Chain of Startup Execution*—originate from the comprehensive framework library created by **James Sinclair** at **[Startup to Scaleup](https://www.startuptoscaleup.com/)** ([`startuptoscaleup.com/startup-frameworks/`](https://www.startuptoscaleup.com/startup-frameworks/)). We encourage founders to explore James Sinclair's original visual guides, coaching resources, and publications.
+* **Classical Strategy & Governance Literature:** We also draw from foundational thinkers: Col. John Boyd (*OODA Loop*), W. Chan Kim & Renée Mauborgne (*Blue Ocean Strategy & ERRC*), Sean Ellis (*Product-Market Fit 40% Benchmark*), Michael E. Porter (*Five Competitive Forces*), Clark A. Campbell (*One Page Project Manager*), and Jeff Bezos / Amazon (*Single-Threaded Leadership & Type 1/2 Decisions*).
+
+For a complete index of all cited modules and canonical links, see **[`ATTRIBUTION.md`](ATTRIBUTION.md)**.
+
+---
+
+## 8. Open Source Licensing & Community Contributions
 
 This framework is maintained by startup founders, technical architects, and venture advisors to empower early-stage entrepreneurs worldwide.
 
