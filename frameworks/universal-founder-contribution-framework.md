@@ -123,6 +123,21 @@ graph TD
 
 ---
 
+### 2.7 Operational Playbook Mapping Across All Startup Paradigms
+
+To move beyond abstract evaluation and provide tactical execution guidance, each Pillar directly links to our modular playbooks across every stage of company development:
+
+| Pillar | Operational Focus | Authoritative Execution Playbook |
+| :--- | :--- | :--- |
+| **Pillar 1: Vision & Strategy** | Starting & Market | **[`playbooks/earned-rights-and-venture-validation.md`](../playbooks/earned-rights-and-venture-validation.md)** (Escaping Red Dot, OPPM, Decision Matrix)<br/>**[`playbooks/market-strategy-and-icp-activation.md`](../playbooks/market-strategy-and-icp-activation.md)** (TAM/SAM/SOM, Atomic ICP, ERRC Matrix) |
+| **Pillar 2: Technical Mastery** | Architecture & Quality | **[`playbooks/programming-best-practices-and-impact-evaluation.md`](../playbooks/programming-best-practices-and-impact-evaluation.md)** (Qualitative standards & $0.2\times$–$2.0\times$ multiplier)<br/>**[`playbooks/technical-due-diligence.md`](../playbooks/technical-due-diligence.md)** (Forensic audit, code health, IP clean room) |
+| **Pillar 3: The 100% Finisher** | Product & Validation | **[`playbooks/product-strategy-and-outcome-driven-design.md`](../playbooks/product-strategy-and-outcome-driven-design.md)** (Outcome-driven design, AI strategy, Observability)<br/>**[`playbooks/problem-and-solution-validation.md`](../playbooks/problem-and-solution-validation.md)** (Value chain, MDP delight loops, 5-pillar journey) |
+| **Pillar 4: Bias for Action** | Execution & Ownership | **[`playbooks/single-threaded-ownership.md`](../playbooks/single-threaded-ownership.md)** (Amazon-style RACI & single-threaded decision rights)<br/>**[`playbooks/startup-execution-kill-chain.md`](../playbooks/startup-execution-kill-chain.md)** (OODA vs F2T2EA, kill criteria, ending half-loop motion) |
+| **Pillar 5: Force Multiplier** | People & Governance | **[`playbooks/co-founder-conflict-resolution.md`](../playbooks/co-founder-conflict-resolution.md)** (Good/Bad leaver cures, mediation protocol)<br/>**[`templates/quarterly-founder-calibration.md`](../templates/quarterly-founder-calibration.md)** (90-day radical candor performance review) |
+| **Pillar 6: Commercial Scoping** | Sales & Capital | **[`playbooks/founder-led-sales-and-pricing.md`](../playbooks/founder-led-sales-and-pricing.md)** (Pre-objections, PMF retention benchmarks, SaaS pricing)<br/>**[`playbooks/cap-table-and-vesting.md`](../playbooks/cap-table-and-vesting.md)** (Hybrid two-tranche vesting, cliffs, ESOP reserves) |
+
+---
+
 ## 3. Quantitative Scoring Rubric (The 1 to 10 Scale)
 
 To avoid vague impressions and personality-based evaluations, founders assess each other using standard behavioral anchors:

@@ -29,13 +29,25 @@ graph TD
         UEOF["<b>Universal Founder Equity & Operating Framework</b><br/>• 5-Factor value-weighted equity model<br/>• Hybrid Two-Tranche Vesting<br/>• Day-1 Corporate Governance"]
     end
 
-    subgraph Playbooks ["2. Venture-Grade Playbooks"]
-        STO["<b>Single-Threaded Ownership (STO)</b><br/>Amazon-style decision rights & RACI"]
-        CAP["<b>Cap Table & Hybrid Vesting</b><br/>Tranche A/B, cliffs & option pools"]
-        CONF["<b>Co-Founder Conflict & Separation</b><br/>Good/Bad Leaver & dead equity cures"]
-        DIL["<b>VC Technical Due Diligence</b><br/>Code forensics & IP clean room"]
-        BEST["<b>Programming Best Practices</b><br/>Qualitative impact & 0.2x–2.0x quality multipliers"]
-        ETR["<b>Earned Rights & Validation</b><br/>Escaping the Red Dot & Becoming Core"]
+    subgraph Playbooks ["2. Venture-Grade Playbooks (Across All Startup Paradigms)"]
+        direction TB
+        subgraph Stage1 ["Stage & Governance"]
+            STO["<b>Single-Threaded Ownership (STO)</b><br/>Amazon-style decision rights & RACI"]
+            CAP["<b>Cap Table & Hybrid Vesting</b><br/>Tranche A/B, cliffs & option pools"]
+            CONF["<b>Co-Founder Conflict & Separation</b><br/>Good/Bad Leaver & dead equity cures"]
+        end
+        subgraph Stage2 ["Validation & GTM"]
+            START["<b>Earned Rights & Validation</b><br/>Starting: Escaping Red Dot & OPPM"]
+            PROB["<b>Problem & Solution Validation</b><br/>Problem: Value chain, MDP & investor updates"]
+            MKT["<b>Market Strategy & ICP Activation</b><br/>Market: Sizing, Atomic ICP & 5:5:5 outreach"]
+            SALES["<b>Founder-Led Sales & Pricing</b><br/>Sales: Pre-objections, PMF & SaaS pricing"]
+        end
+        subgraph Stage3 ["Product & Technical Excellence"]
+            PROD["<b>Product & Outcome-Driven Design</b><br/>Product: AI-first strategy & observability"]
+            KILL["<b>Startup Execution Kill Chain</b><br/>Execution: OODA vs F2T2EA & kill criteria"]
+            ENG["<b>Programming Best Practices</b><br/>Engineering: 0.2x–2.0x quality multipliers"]
+            DIL["<b>VC Technical Due Diligence</b><br/>Forensics: Code audit & clean room IP"]
+        end
     end
 
     subgraph Legal ["3. Pluggable Day-1 Templates"]
@@ -59,22 +71,27 @@ graph TD
 
 ## 3. Directory Tour & What's Inside
 
-| Directory / File | Description & Purpose |
-| :--- | :--- |
-| **[`frameworks/universal-founder-contribution-framework.md`](frameworks/universal-founder-contribution-framework.md)** | The **6 Pillars of Foundership** (Vision, Technical Mastery, 100% Finisher, High Agency, Leadership, Commercial Scoping), stage weights, and behavioral scoring anchors. |
-| **[`frameworks/universal-founder-equity-and-operating-framework.md`](frameworks/universal-founder-equity-and-operating-framework.md)** | Mathematical **5-Factor Dynamic Equity Model**, milestone-driven two-tranche hybrid vesting, and legal hygiene. |
-| **[`playbooks/single-threaded-ownership.md`](playbooks/single-threaded-ownership.md)** | Eliminating consensus drag, Amazon Type 1 vs Type 2 decisions, RACI assignments, and the 24-hour review SLA. |
-| **[`playbooks/cap-table-and-vesting.md`](playbooks/cap-table-and-vesting.md)** | Cap table modeling, 15–20% unallocated ESOP reserve, Tranche A runway vs Tranche B milestone triggers, and double-trigger acceleration. |
-| **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
-| **[`playbooks/technical-due-diligence.md`](playbooks/technical-due-diligence.md)** | What top VCs and CTO diligence partners inspect: code health, architecture, security rules, and clean room licensing. |
-| **[`playbooks/programming-best-practices-and-impact-evaluation.md`](playbooks/programming-best-practices-and-impact-evaluation.md)** | **Qualitative Architectural Paradigms**: KISS, DDD layered boundaries, default-deny security, 100% finisher standards, and the **$0.2\times$ to $2.0\times$ Quality Multiplier**. |
-| **[`playbooks/earned-rights-and-venture-validation.md`](playbooks/earned-rights-and-venture-validation.md)** | **The Earned Rights Principle**: Escaping the "Red Dot", 14-day smoke tests (MVO), Atomic ICP definition, the 5-pillar user journey, and shifting from nice-to-have to **Mission-Critical Core**. |
-| **[`templates/co-founder-operating-agreement.md`](templates/co-founder-operating-agreement.md)** | Pluggable, ready-to-sign co-founder operating contract with hybrid vesting and STO provisions. |
-| **[`templates/invention-assignment-piia.md`](templates/invention-assignment-piia.md)** | Proprietary Information & Inventions Agreement ensuring corporate ownership and "Zero Hostage Code." |
-| **[`templates/section-83b-election-template.md`](templates/section-83b-election-template.md)** | Model IRS 83(b) election form, certified mail cover letter, and 30-day tracking guide. |
-| **[`templates/quarterly-founder-calibration.md`](templates/quarterly-founder-calibration.md)** | 90-day Founder Calibration Review (FCR) sheet for peer calibration and milestone verification. |
-| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit multi-language codebases. |
-| **[`tools/founder_audit.py`](tools/founder_audit.py)** | Standalone, zero-dependency Python CLI tool supporting .NET, Ruby, C++, Java, Go, Python, Rust, PHP, Swift, and more. |
+| Directory / File | Paradigm / Scope | Description & Purpose |
+| :--- | :--- | :--- |
+| **[`frameworks/universal-founder-contribution-framework.md`](frameworks/universal-founder-contribution-framework.md)** | **Core OS** | The **6 Pillars of Foundership** (Vision, Technical Mastery, 100% Finisher, High Agency, Leadership, Commercial Scoping), stage weights, and behavioral scoring anchors. |
+| **[`frameworks/universal-founder-equity-and-operating-framework.md`](frameworks/universal-founder-equity-and-operating-framework.md)** | **Core OS** | Mathematical **5-Factor Dynamic Equity Model**, milestone-driven two-tranche hybrid vesting, and legal hygiene. |
+| **[`playbooks/single-threaded-ownership.md`](playbooks/single-threaded-ownership.md)** | **Governance** | Eliminating consensus drag, Amazon Type 1 vs Type 2 decisions, RACI assignments, and the 24-hour review SLA. |
+| **[`playbooks/cap-table-and-vesting.md`](playbooks/cap-table-and-vesting.md)** | **Governance** | Cap table modeling, 15–20% unallocated ESOP reserve, Tranche A runway vs Tranche B milestone triggers, and double-trigger acceleration. |
+| **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | **Governance** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
+| **[`playbooks/earned-rights-and-venture-validation.md`](playbooks/earned-rights-and-venture-validation.md)** | **Starting** | **The Earned Rights Principle**: Escaping the "Red Dot", OPPM (One Page Project Manager), extreme uncertainty decision matrix, conative founder instincts, and becoming **Mission-Critical Core**. |
+| **[`playbooks/problem-and-solution-validation.md`](playbooks/problem-and-solution-validation.md)** | **Problem** | Hunting acute agony, Startup Value Chain mapping, Solution First Glance stress-testing, **Minimum Delightful Product (MDP)** loops, the 5 Pillars of user journey, and advisory boards. |
+| **[`playbooks/market-strategy-and-icp-activation.md`](playbooks/market-strategy-and-icp-activation.md)** | **Market** | Bottom-up TAM/SAM/SOM sizing, Porter's 5 forces & 7 entry barriers, **Atomic ICP (6 parts)**, **5:5:5 Cold Discovery Outreach**, Red vs Blue Ocean (ERRC matrix), and 14-day MVO smoke tests. |
+| **[`playbooks/product-strategy-and-outcome-driven-design.md`](playbooks/product-strategy-and-outcome-driven-design.md)** | **Product** | **Outcome-Driven Design (ODD)**, AI-first architecture & data flywheels, **The 7 Tech Commandments**, full-stack observability, the Golden Handshake onboarding, and startup pivot mechanics. |
+| **[`playbooks/founder-led-sales-and-pricing.md`](playbooks/founder-led-sales-and-pricing.md)** | **Sales** | 20 daily outbound touches, discovery-to-paid pipeline stages, **Sales Pre-Objections Framework**, Month-2 PMF retention benchmarks, PLG loops, and value-based SaaS pricing. |
+| **[`playbooks/startup-execution-kill-chain.md`](playbooks/startup-execution-kill-chain.md)** | **Execution** | **OODA vs F2T2EA**, the 6 links of the startup kill chain, eliminating the "half-loop" motion theater, pre-commit milestone kill gates, and the fractal operating rhythm. |
+| **[`playbooks/programming-best-practices-and-impact-evaluation.md`](playbooks/programming-best-practices-and-impact-evaluation.md)** | **Engineering** | **Qualitative Architectural Paradigms**: KISS, DDD layered boundaries, default-deny security, 100% finisher standards, and the **$0.2\times$ to $2.0\times$ Quality Multiplier**. |
+| **[`playbooks/technical-due-diligence.md`](playbooks/technical-due-diligence.md)** | **Forensics** | What top VCs and CTO diligence partners inspect: code health, architecture, security rules, and clean room licensing. |
+| **[`templates/co-founder-operating-agreement.md`](templates/co-founder-operating-agreement.md)** | **Legal** | Pluggable, ready-to-sign co-founder operating contract with hybrid vesting and STO provisions. |
+| **[`templates/invention-assignment-piia.md`](templates/invention-assignment-piia.md)** | **Legal** | Proprietary Information & Inventions Agreement ensuring corporate ownership and "Zero Hostage Code." |
+| **[`templates/section-83b-election-template.md`](templates/section-83b-election-template.md)** | **Legal** | Model IRS 83(b) election form, certified mail cover letter, and 30-day tracking guide. |
+| **[`templates/quarterly-founder-calibration.md`](templates/quarterly-founder-calibration.md)** | **Legal** | 90-day Founder Calibration Review (FCR) sheet for peer calibration and milestone verification. |
+| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | **Tooling** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit multi-language codebases. |
+| **[`tools/founder_audit.py`](tools/founder_audit.py)** | **Tooling** | Standalone, zero-dependency Python CLI tool supporting .NET, Ruby, C++, Java, Go, Python, Rust, PHP, Swift, and more. |
 
 ---
 
