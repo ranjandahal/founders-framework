@@ -1,0 +1,67 @@
+{
+  "repositories": [
+    "./",
+    "../pc-hc",
+    "../pc-identity",
+    "../pc-hr",
+    "../pc-docs"
+  ],
+  "alias_map": {
+    "Founder 1 (CTO / Architect)": [
+      "ranjandahal",
+      "ranjan",
+      "ranjan@patheracare.com"
+    ],
+    "Founder 2 (Clinical / Domain)": [
+      "ravi dahal",
+      "ravi",
+      "ravi@patheracare.com"
+    ],
+    "Founder 3 (Infra / Engine)": [
+      "gaurav nirola",
+      "gaurav",
+      "gauravnirola@gmail.com"
+    ]
+  },
+  "extensions": [
+    ".ts",
+    ".tsx",
+    ".js",
+    ".jsx",
+    ".go",
+    ".py",
+    ".rs",
+    ".java",
+    ".sql",
+    ".html",
+    ".css",
+    ".vue",
+    ".svelte",
+    ".sh",
+    ".ps1",
+    ".md"
+  ],
+  "ignored_dirs": [
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    ".next",
+    ".nuxt",
+    ".vitepress/dist",
+    ".vitepress/cache",
+    "vendor",
+    "coverage",
+    "tmp",
+    ".cache",
+    "checkpoints"
+  ],
+  "ignored_files": [
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "go.sum",
+    "Cargo.lock",
+    "poetry.lock"
+  ]
+}
