@@ -35,6 +35,7 @@ graph TD
         CONF["<b>Co-Founder Conflict & Separation</b><br/>Good/Bad Leaver & dead equity cures"]
         DIL["<b>VC Technical Due Diligence</b><br/>Code forensics & IP clean room"]
         BEST["<b>Programming Best Practices</b><br/>Qualitative impact & 0.2x–2.0x quality multipliers"]
+        ETR["<b>Earned Rights & Validation</b><br/>Escaping the Red Dot & Becoming Core"]
     end
 
     subgraph Legal ["3. Pluggable Day-1 Templates"]
@@ -67,6 +68,7 @@ graph TD
 | **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
 | **[`playbooks/technical-due-diligence.md`](playbooks/technical-due-diligence.md)** | What top VCs and CTO diligence partners inspect: code health, architecture, security rules, and clean room licensing. |
 | **[`playbooks/programming-best-practices-and-impact-evaluation.md`](playbooks/programming-best-practices-and-impact-evaluation.md)** | **Qualitative Architectural Paradigms**: KISS, DDD layered boundaries, default-deny security, 100% finisher standards, and the **$0.2\times$ to $2.0\times$ Quality Multiplier**. |
+| **[`playbooks/earned-rights-and-venture-validation.md`](playbooks/earned-rights-and-venture-validation.md)** | **The Earned Rights Principle**: Escaping the "Red Dot", 14-day smoke tests (MVO), Atomic ICP definition, the 5-pillar user journey, and shifting from nice-to-have to **Mission-Critical Core**. |
 | **[`templates/co-founder-operating-agreement.md`](templates/co-founder-operating-agreement.md)** | Pluggable, ready-to-sign co-founder operating contract with hybrid vesting and STO provisions. |
 | **[`templates/invention-assignment-piia.md`](templates/invention-assignment-piia.md)** | Proprietary Information & Inventions Agreement ensuring corporate ownership and "Zero Hostage Code." |
 | **[`templates/section-83b-election-template.md`](templates/section-83b-election-template.md)** | Model IRS 83(b) election form, certified mail cover letter, and 30-day tracking guide. |

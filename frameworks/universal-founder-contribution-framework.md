@@ -64,6 +64,7 @@ graph TD
 *Can this founder see around corners and define where the company must win 2 to 3 years before the market catches on?*
 
 * **3-Year Strategic Horizon:** Synthesizes customer pain points, market shifts, emerging technologies, and regulatory changes into a compelling, executable product roadmap.
+* **The Earned Rights Discipline:** Rejects premature scaling. Understands that startup progression is a strict ladder of earned milestones: earning the right to build through proof, earning the right to sell through delivery, and earning the right to scale through retention.
 * **Moat Architecture:** Focuses development on compounding defensibility—data network effects, architectural proprietary advantages, switching costs, and regulatory compliance barriers.
 * **Narrative & Framing:** Distills complex technical problems into crisp, inspiring narratives that attract top-tier talent, early design partners, and venture investors.
 * **Product Cohesion:** Prevents fragmented, feature-creep development; ensures every shipped feature reinforces the company's core value proposition.
@@ -114,6 +115,8 @@ graph TD
 *Does this founder connect day-to-day engineering and product output directly to customer adoption, enterprise value, and financial runway?*
 
 * **Value-Oriented Scoping:** Prioritizes engineering efforts by customer impact and enterprise revenue rather than pure intellectual curiosity or resume-building.
+* **Atomic ICP & Demand Validation:** Defines customers with atomic specificity; validates commercial appetite via 14-day smoke tests (MVO) before committing engineering sprints.
+* **"Becoming Core" Focus:** Architectures the product to become an indispensable system-of-record with deep data gravity, moving beyond nice-to-have utilities into mission-critical operating infrastructure.
 * **Pilot-to-Paid Conversion Focus:** Actively engages with prospective customers, observes user onboarding sessions, identifies friction, and drives pilots to signed commercial contracts.
 * **Capital Efficiency & Runway Awareness:** Understands cloud infrastructure costs, third-party API burn, and hiring headcount; optimizes unit economics from Day 1.
 * **Investor & Stakeholder Credibility:** Capable of speaking with authority to technical diligence teams, institutional venture funds, and regulatory auditors.
