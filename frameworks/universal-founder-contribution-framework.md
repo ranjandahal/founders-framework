@@ -1,5 +1,5 @@
 # Universal Founder Contribution & Leadership Framework (UFCF)
-### An Open-Source Operating System for Startup Co-Founders
+### The Founder Contribution & Leadership Scorecard (FCLS) — An Open-Source Operating System for Startup Co-Founders
 
 > **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)  
 > **Audience:** Early-Stage Startup Founders, Co-Founders, Board Advisors, Accelerators, and Venture Investors  
@@ -21,8 +21,10 @@ Startups face existential failure when:
 4. **The "Employee Mindset" Co-Founder:** Waiting for instructions or a Jira card rather than autonomously taking single-threaded ownership of an entire problem domain end-to-end.
 5. **Inability to Adapt When the Roadmap Pivots:** Initial domain knowledge provides early product grounding, but startups evolve rapidly. A founder who cannot adapt when the product roadmap expands beyond their original niche becomes an operational bottleneck.
 
-### 1.2 Foundational Lineage & Core Creed
-This framework synthesizes the empirical principles of **Y Combinator (Dynamic Equity & Future Value)**, **Frank Demmler's Founder's Pie Calculator (Carnegie Mellon)**, **Mike Moyer's Slicing Pie (Risk-Adjusted Contributions)**, and **Amazon's Single-Threaded Leadership**:
+### 1.2 The Founder Contribution & Leadership Scorecard (FCLS)
+This **Founder Contribution & Leadership Scorecard (FCLS)** synthesizes the best principles of **Y Combinator (Dynamic Equity & Future Value)**, **Frank Demmler's Founder's Pie Calculator (Carnegie Mellon)**, **Mike Moyer's Slicing Pie (Risk-Adjusted Contributions)**, and **Amazon's Single-Threaded Leadership**. It provides an objective, transparent, and defensible model tailored for universal founders.
+
+The Core Creed:
 * **Equity must be earned, not just awaited.** Time-based vesting alone enables "vesting in sleep." True startup equity reflects **sustained value creation, execution speed, and disproportionate responsibility**.
 * **High agency is non-negotiable.** Founders do not wait for consensus, permission, or a task assignment. They identify what needs to be done, take calculated risks, and build momentum.
 * **Single-Threaded Ownership beats committee consensus.** Shared ownership of a problem means nobody owns it. Every critical system must have one accountable owner with clear decision rights.

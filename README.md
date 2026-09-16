@@ -99,8 +99,11 @@ graph TD
 | **[`templates/quarterly-founder-calibration.md`](templates/quarterly-founder-calibration.md)** | **Legal** | 90-day Founder Calibration Review (FCR) sheet for peer calibration and milestone verification. |
 | **[`templates/fast-advisor-agreement.md`](templates/fast-advisor-agreement.md)** | **Legal** | **Founder Advisor Standard Agreement (FAST)**: 24-month vesting, 3-month cliff, quarterly contribution triggers, and 60-day non-responsiveness clawback. |
 | **[`templates/customer-pilot-agreement.md`](templates/customer-pilot-agreement.md)** | **Legal** | **B2B SaaS Customer Pilot Agreement**: Paid evaluation parameters, objective quantitative success criteria, and automatic conversion into annual MSA. |
-| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | **Tooling** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit multi-language codebases. |
+| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | **Tooling** | Drop-in AI agent skill for forensic multi-repo Git codebase audits, surviving lines, and 6-Pillar scorecard calibration. |
+| **[`skills/founder-advisor/SKILL.md`](skills/founder-advisor/SKILL.md)** | **Tooling** | Drop-in AI agent skill for on-demand founder advisory across equity splits, customer validation, SaaS pricing, and conflict resolution. |
+| **[`skills/equity-calculator/SKILL.md`](skills/equity-calculator/SKILL.md)** | **Tooling** | Drop-in AI agent skill for automated 5-Factor Dynamic Equity, Demmler's Pie, and Post-Money SAFE dilution waterfalls. |
 | **[`tools/founder_audit.py`](tools/founder_audit.py)** | **Tooling** | Standalone, zero-dependency Python CLI tool supporting .NET, Ruby, C++, Java, Go, Python, Rust, PHP, Swift, and more. |
+| **[`tools/equity_calculator.py`](tools/equity_calculator.py)** | **Tooling** | Standalone, zero-dependency Python CLI tool for 5-Factor dynamic equity, Demmler's Pie, and SAFE cap table modeling. |
 
 ---
 
@@ -131,40 +134,50 @@ Every quarter, founding teams convene for a structured calibration using the **[
 
 ---
 
-## 5. Automated Forensics: Running the CLI Audit Tool
+## 5. Automated Computational & Forensic Tooling
 
-The repository includes a universal, standalone Python tool (`tools/founder_audit.py`) that runs `git blame` and commit log forensics across one or more repositories without any external dependencies.
+The framework includes two standalone, zero-dependency Python tools that execute immediately in any terminal or agent environment:
 
-### Basic Usage:
+### Tool 1: Multi-Repo Codebase & Git Audit (`tools/founder_audit.py`)
+Runs `git blame` and commit log forensics across one or more repositories in any language (.NET, Ruby, C++, Java, Go, Python, Rust, PHP, TS):
 ```bash
 # Audit a single local repository
 python tools/founder_audit.py --repos . --output audit-report.md
 
 # Audit multiple ecosystem repositories simultaneously
 python tools/founder_audit.py --repos ../frontend ../backend ../infra --output master-audit.md --json master-audit.json
+
+# Use author alias configuration mapping
+python tools/founder_audit.py --config tools/founder-audit.config.example.json
 ```
 
-### Using a Configuration File:
-Copy `tools/founder-audit.config.example.json` and configure author aliases to map personal emails, GitHub handles, and machine hostnames to canonical founder identities:
+### Tool 2: Dynamic Equity & SAFE Dilution Calculator (`tools/equity_calculator.py`)
+Calculates objective 5-Factor Dynamic Equity splits, Demmler's Pie, and Post-Money SAFE waterfalls:
 ```bash
-python tools/founder_audit.py --config my-startup.config.json
-```
+# 5-Factor Dynamic Equity Split (scores 1-10 across 5 economic scarcity factors)
+python tools/equity_calculator.py --mode dynamic --founders "Alice:9,8,7,6,8" "Bob:5,10,8,9,6" --esop 15
 
-### Generated Outputs:
-1. **Markdown Audit Report (`audit-report.md`):** Executive summary, surviving production lines table, subsystem STO breakdown, and per-repo commit distributions.
-2. **JSON Telemetry Artifact (`audit-report.json`):** Machine-readable payload for CI/CD pipelines, investor data rooms, or executive dashboards.
+# Carnegie Mellon Demmler's Founder's Pie
+python tools/equity_calculator.py --mode demmler --founders "Alice:10,8,7,9,8" "Bob:6,9,9,10,7" --esop 15
+
+# Post-Money SAFE Stacking & Pre-Series A Option Pool Shuffle
+python tools/equity_calculator.py --mode safe --safes "500000:5000000" "1000000:10000000" --esop 15 --series-a "5000000:25000000"
+
+# Interactive demonstration of all 3 models
+python tools/equity_calculator.py --demo
+```
 
 ---
 
-## 6. AI Agent Integration: The `founder-audit` Skill
+## 6. AI Agent Integration: Pluggable Skills Suite
 
-Modern AI coding agents (such as Google Antigravity, Claude Code, or Cursor) can act as an objective, neutral third party during founder calibrations and technical due diligence.
+Modern AI coding agents (such as Google Antigravity, Claude Code, Cursor, or GitHub Copilot) can load our drop-in skills to act as an objective, neutral third party during founder calibrations, strategy sessions, and diligence reviews:
 
-### How to Use with AI Agents:
-1. Load or reference [`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md) in your AI assistant's context.
-2. Prompt the AI agent:
-   > *"Run a founder contribution and code quality audit across all active repositories in my workspace. Map surviving lines of code to our founders, check subsystem single-threaded ownership, and prepare a 6-Pillar evaluation scorecard for our upcoming quarterly calibration."*
-3. The AI agent will discover the repositories, inspect Git blame, synthesize qualitative PR evidence, and generate an audit report formatted to the Universal Founder Framework standards.
+| AI Skill | Path | Description & Example Trigger |
+|---|---|---|
+| **`founder-audit`** | [`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md) | **Forensic Code Audit:** *"Audit surviving code ownership and commit churn across our repositories and generate a 6-Pillar scorecard for our quarterly calibration."* |
+| **`founder-advisor`** | [`skills/founder-advisor/SKILL.md`](skills/founder-advisor/SKILL.md) | **Strategic Co-Pilot:** *"How should we price our B2B SaaS pilot, handle customer pricing objections, and set up single-threaded ownership so co-founders don't clash?"* |
+| **`equity-calculator`** | [`skills/equity-calculator/SKILL.md`](skills/equity-calculator/SKILL.md) | **Cap Table Modeling:** *"Calculate our co-founder equity split using the 5-Factor Dynamic model, and model our dilution if we take \$1M on a \$10M post-money SAFE."* |
 
 ---
 
