@@ -65,12 +65,25 @@ Map all variations to the canonical founder name:
 Do **not** rely on raw commit logs or `git log --stat` (which can be heavily inflated by copy-pasting, churn, or generated files). Measure **living lines in the current `HEAD`**:
 
 ```bash
-# Run git blame across non-ignored, tracked production files
-git ls-files -- '*.ts' '*.tsx' '*.go' '*.py' '*.rs' '*.java' '*.sql' | xargs -n 1 git blame --line-porcelain | grep '^author ' | sort | uniq -c | sort -nr
+# Run git blame across tracked production files across languages
+git ls-files -- '*.ts' '*.tsx' '*.js' '*.py' '*.go' '*.rs' '*.cs' '*.cpp' '*.c' '*.rb' '*.java' '*.kt' '*.php' '*.swift' '*.dart' '*.sql' | xargs -n 1 git blame --line-porcelain | grep '^author ' | sort | uniq -c | sort -nr
 ```
 
-**Filter Rules:**
-* **Exclude:** `package-lock.json`, `pnpm-lock.yaml`, `vendor/`, `node_modules/`, generated SDKs, build artifacts, minified bundles, and third-party vendor assets.
+**Supported Ecosystems:**
+* **TypeScript / JavaScript:** `.ts`, `.tsx`, `.js`, `.jsx`, `.vue`, `.svelte`
+* **Python:** `.py`
+* **Go & Rust:** `.go`, `.rs`
+* **.NET (C#, F#, VB):** `.cs`, `.fs`, `.vb`
+* **C / C++:** `.cpp`, `.cxx`, `.cc`, `.c`, `.hpp`, `.h`
+* **Ruby:** `.rb`, `.rake`, `.erb`
+* **JVM (Java, Kotlin, Scala):** `.java`, `.kt`, `.scala`
+* **PHP:** `.php`
+* **Mobile (Swift, Dart/Flutter):** `.swift`, `.dart`
+* **Data & Schemas:** `.sql`, `.prisma`, `.proto`, `.graphql`
+* **DevOps / IaC:** `.tf`, `.bicep`, `.sh`, `.ps1`
+
+**Strict Filter Rules:**
+* **Exclude:** `package-lock.json`, `pnpm-lock.yaml`, `yarn.lock`, `Gemfile.lock`, `packages.lock.json`, `Cargo.lock`, `go.sum`, `vendor/`, `node_modules/`, `bin/`, `obj/`, `dist/`, `build/`, and minified assets.
 * **Include:** Production source code, API routes, database schemas, security rules, and test suites.
 
 ### 2.2 Commit Churn & Longevity Ratio
@@ -93,28 +106,47 @@ git log --author="Author Name" --format='%ad' --date=short | sort -u | wc -l
 
 Categorize code ownership by functional subsystem:
 1. **Security & Identity Gateway:** Authentication, JWT/JWKS token verification, KMS cryptographic signing, RBAC middleware.
-2. **Core Data Engine & Schemas:** Database definitions, multi-tenant partition logic, Firestore/Postgres access rules.
+2. **Core Data Engine & Schemas:** Database definitions, multi-tenant partition logic, Firestore/Postgres/EF Core models.
 3. **Clinical / Domain Workflows:** Forms engine, specialized state reporting, workflow state machines.
 4. **Platform & Infrastructure (SRE):** Dockerfiles, CI/CD GitHub Actions, Terraform IaC, logging sinks, Secret Manager.
 5. **Automated Test Suites:** Unit tests, integration tests, end-to-end harnesses.
 
-For each subsystem, determine the **Primary Author** ($> 50\%$ living code) and evaluate whether **Single-Threaded Ownership** is preserved.
+For each subsystem, determine the **Primary Owner** ($> 50\%$ living code) and evaluate whether **Single-Threaded Ownership** is preserved.
 
 ---
 
-## Step 4: Qualitative Impact Synthesis
+## Step 4: Qualitative Paradigm & Architectural Evaluation
 
-Examine the non-numeric dimensions that distinguish a visionary founder from an employee engineer:
-* **The "100% Finisher" Test:** Did the founder take the feature from prototype to production—including error boundaries, automated tests, security scans, and operational runbooks?
-* **Zero-to-One Inertia:** Did this founder initiate the repository, build the initial prototype solo, and establish legal and cloud infrastructure?
-* **Bar-Raising Standards:** Does the founder's code elevate the team's patterns, or does it introduce technical debt that others must constantly refactor?
-* **Commercial Scoping:** Does the code solve real customer problems that drive revenue and pilot conversion?
+Quantitative lines of code represent only **40% of real founder contribution**. The remaining **60%** is dictated by adherence to architectural best practices documented in [Programming Best Practices & Qualitative Impact Evaluation Guide](../../playbooks/programming-best-practices-and-impact-evaluation.md):
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   QUALITATIVE ARCHITECTURAL RUBRIC                     │
+├──────────────────────┬────────────────────────┬────────────────────────┤
+│ ARCHITECTURAL PILLAR │ LOW STANDARD (0.2x)    │ HIGH STANDARD (2.0x)   │
+├──────────────────────┼────────────────────────┼────────────────────────┤
+│ 1. Layered DDD       │ Controllers call DB    │ Strict Repository ↔    │
+│    Architecture      │ directly; leaky state  │ Service ↔ API boundary │
+│ 2. Security &        │ Insecure client filter │ Tenant partition rules │
+│    Multi-Tenancy     │ hardcoded secrets      │ KMS HSM token signing  │
+│ 3. 100% Finisher     │ Stalls at 90% prototype│ Typed, tested, error   │
+│    Standard          │ unhandled edge cases   │ boundaries, runbooks   │
+│ 4. Anti-Bloat (KISS) │ Dependency bloat;      │ Standard library first;│
+│    & Simplicity      │ over-engineered micro  │ minimalist clean code  │
+│ 5. Refactoring &     │ Leaves dead debt;      │ Deletes legacy debt;   │
+│    Test Hygiene      │ no automated tests     │ high test-to-code ratio│
+└──────────────────────┴────────────────────────┴────────────────────────┘
+```
+
+### The Calibrated Impact Formula:
+Calculate each founder's net enterprise contribution using the **Architectural Quality Multiplier ($0.2\times \text{ to } 2.0\times$)**:
+$$\text{Calibrated Impact} = \text{Surviving Production Lines} \times \text{Architectural Quality Multiplier}$$
 
 ---
 
 ## Step 5: Scoring Against the 6 Pillars of Foundership
 
-Synthesize findings into the **Universal Founder Contribution Scorecard**:
+Synthesize quantitative telemetry and qualitative architectural ratings into the **Universal Founder Contribution Scorecard**:
 
 | Foundational Pillar | Target Evidence & Telemetry | Weight (Stage 1) | Weight (Stage 2) | Weight (Stage 3) |
 | :--- | :--- | :---: | :---: | :---: |

@@ -20,22 +20,88 @@ from collections import defaultdict
 from pathlib import Path
 
 
-# Default file extensions to audit
+# Expanded file extensions to audit across modern tech stacks
 DEFAULT_EXTENSIONS = {
-    ".ts", ".tsx", ".js", ".jsx", ".go", ".py", ".rs", ".java",
-    ".sql", ".html", ".css", ".vue", ".svelte", ".sh", ".ps1"
+    # TypeScript, JavaScript, Web
+    ".ts", ".tsx", ".js", ".jsx", ".vue", ".svelte", ".html", ".css", ".scss", ".sass", ".less",
+    # Python
+    ".py",
+    # Go
+    ".go",
+    # Rust
+    ".rs",
+    # .NET (C#, F#, VB)
+    ".cs", ".fs", ".vb", ".csproj", ".fsproj",
+    # C / C++
+    ".cpp", ".cxx", ".cc", ".c", ".hpp", ".h", ".hxx",
+    # Ruby
+    ".rb", ".rake", ".gemspec", ".erb",
+    # JVM (Java, Kotlin, Scala)
+    ".java", ".kt", ".kts", ".scala", ".groovy",
+    # PHP
+    ".php", ".phtml",
+    # Mobile (Swift, Objective-C, Dart/Flutter)
+    ".swift", ".m", ".mm", ".dart",
+    # Functional / Systems (Elixir, Erlang, Clojure, Zig)
+    ".ex", ".exs", ".erl", ".clj", ".zig",
+    # Database, Data & Schema Definitions
+    ".sql", ".prisma", ".proto", ".graphql", ".gql",
+    # DevOps, IaC & Shell
+    ".sh", ".bash", ".zsh", ".ps1", ".tf", ".tfvars", ".bicep",
+    # Documentation & Architecture RFCs
+    ".md"
 }
 
-# Directories and files to strictly ignore
+# Directories and build artifacts to strictly ignore across ecosystems
 DEFAULT_IGNORED_DIRS = {
-    "node_modules", ".git", "dist", "build", ".next", ".nuxt",
-    ".vitepress/dist", ".vitepress/cache", "vendor", "coverage",
+    # Node / JS
+    "node_modules", "dist", "build", ".next", ".nuxt", ".vitepress/dist", ".vitepress/cache", "coverage",
+    # Git
+    ".git",
+    # Python
+    "__pycache__", ".pytest_cache", ".venv", "venv", "env",
+    # .NET
+    "bin", "obj", ".vs", "packages",
+    # C / C++
+    "CMakeFiles", "CMakeScripts", "Debug", "Release", "x64", "x86", "ipch", ".ccls-cache",
+    # Ruby
+    ".bundle", "vendor/bundle",
+    # Java / Kotlin / Rust
+    ".gradle", ".idea", "target", "out",
+    # Swift / iOS
+    "Pods", "DerivedData", ".build",
+    # Dart / Flutter
+    ".dart_tool",
+    # Elixir
+    "_build", "deps",
+    # Terraform / Cloud
+    ".terraform",
+    # Temp & Caches
     "tmp", ".cache", "checkpoints"
 }
 
+# Dependency lockfiles and minified generated files to ignore from blame
 DEFAULT_IGNORED_FILES = {
-    "package-lock.json", "pnpm-lock.yaml", "yarn.lock", "go.sum",
-    "Cargo.lock", "poetry.lock", "composer.lock"
+    # Node
+    "package-lock.json", "pnpm-lock.yaml", "yarn.lock", "bun.lockb",
+    # Go & Rust
+    "go.sum", "Cargo.lock",
+    # Python
+    "poetry.lock", "Pipfile.lock",
+    # PHP
+    "composer.lock",
+    # Ruby
+    "Gemfile.lock",
+    # .NET
+    "packages.lock.json", "paket.lock",
+    # Swift / iOS
+    "Podfile.lock",
+    # Dart / Flutter
+    "pubspec.lock",
+    # Elixir
+    "mix.lock",
+    # C/C++
+    "CMakeCache.txt"
 }
 
 
@@ -149,22 +215,62 @@ def audit_blame(repo_path, tracked_files, alias_map):
 
 
 def classify_subsystem(file_path):
-    """Heuristically categorize file into a functional subsystem."""
+    """Heuristically categorize file into a functional subsystem across tech stacks."""
     lower = file_path.lower()
-    if any(s in lower for s in ["test", "spec", "__tests__", "e2e"]):
+    
+    # Automated Tests (Jest, PyTest, NUnit, RSpec, Go test, GoogleTest)
+    if any(s in lower for s in [
+        "test", "tests", "spec", "specs", "__tests__", "e2e", "unittest",
+        ".test.", ".spec.", "_test.go", "test_", "_spec.rb"
+    ]):
         return "Automated Tests"
-    if any(s in lower for s in ["auth", "identity", "token", "jwt", "kms", "crypto", "security"]):
+        
+    # Security, Identity & Cryptography
+    if any(s in lower for s in [
+        "auth", "identity", "token", "jwt", "kms", "crypto", "security",
+        "rbac", "guard", "oauth", "openid", "claims", "permission", "encryption"
+    ]):
         return "Security & Identity"
-    if any(s in lower for s in ["infra", "docker", "k8s", "terraform", ".github", "scripts"]):
+        
+    # Infrastructure, SRE & Build Systems
+    if any(s in lower for s in [
+        "infra", "docker", "k8s", "kubernetes", "terraform", ".github", "scripts",
+        "bicep", "helm", "ci", "cd", "vagrantfile", "dockerfile", "compose",
+        "cmakelists.txt", "makefile", "build.gradle", "gemfile"
+    ]):
         return "Infra & DevOps"
-    if any(s in lower for s in ["schema", "model", "db", "firestore", "sql", "migration"]):
+        
+    # Database, Data Access, Models & ORM
+    if any(s in lower for s in [
+        "schema", "model", "models", "entity", "entities", "db", "firestore",
+        "sql", "migration", "migrations", "repository", "repositories",
+        "prisma", "dbcontext", "active_record", "store", "queries"
+    ]):
         return "Database & Schemas"
-    if any(s in lower for s in ["api", "server", "service", "controller", "handler"]):
+        
+    # Backend Services & Web API Controllers
+    if any(s in lower for s in [
+        "api", "server", "service", "services", "controller", "controllers",
+        "handler", "handlers", "endpoint", "endpoints", "router", "routes",
+        "grpc", "resolvers", "usecase", "interactor"
+    ]):
         return "Backend Services"
-    if any(s in lower for s in ["ui", "component", "view", "page", "frontend", "client"]):
+        
+    # Frontend, Presentation & Client Components
+    if any(s in lower for s in [
+        "ui", "component", "components", "view", "views", "page", "pages",
+        "frontend", "client", "assets", "styles", "layout", "layouts",
+        ".erb", ".blade.php", ".xaml", ".story."
+    ]):
         return "Frontend & UI"
-    if any(s in lower for s in ["doc", "docs", "specs", "guide"]):
+        
+    # Documentation, Architecture Specs & Governance
+    if any(s in lower for s in [
+        "doc", "docs", "specs", "specifications", "guide", "guidelines",
+        "rfcs", "rfc", "architecture", "playbooks", "templates"
+    ]):
         return "Documentation & Specs"
+        
     return "Core Architecture"
 
 
@@ -321,10 +427,24 @@ def render_markdown_report(aggregated, repo_results):
         md.append("\n")
 
     md.append("---\n")
-    md.append("## 4. Methodology & Data Integrity Notes")
+    md.append("## 4. Qualitative Paradigm & Architectural Quality Multipliers\n")
+    md.append("Quantitative lines of code represent only **40% of real founder contribution**. The remaining **60%** is dictated by adherence to architectural best practices:\n")
+    md.append("| Qualitative Dimension | Low Standard (0.2x – 0.5x Multiplier) | High Standard (1.5x – 2.0x Multiplier) |")
+    md.append("| :--- | :--- | :--- |")
+    md.append("| **1. Layered Architecture (DDD)** | Direct database calls in UI views; mixed concerns; leaky abstractions | Clean Repository $\\leftrightarrow$ Service $\\leftrightarrow$ API boundary; testable interfaces |")
+    md.append("| **2. Multi-Tenancy & Security** | Insecure client-side filtering; hardcoded secrets; missing audit logs | Tenant-partitioned queries; KMS HSM token signing; zero committed keys |")
+    md.append("| **3. The '100% Finisher' Standard** | Stalls at 90% prototype; no automated tests; unhandled production edge cases | Complete error boundaries; automated CI tests; production operational runbooks |")
+    md.append("| **4. Simplicity & Anti-Bloat (KISS)** | Premature microservices; massive unused npm/gem dependencies; over-engineering | Native standard library use; minimalist component design; YAGNI adherence |")
+    md.append("| **5. Single-Threaded Ownership (STO)** | Diffusion of responsibility; slow reviews; waiting for consensus | Unilateral Type 2 decisions; unblocking peer PRs within 24 business hours |\n")
+    md.append("> **Calibrated Impact Formula:**  \n")
+    md.append("> $$\\text{Adjusted Impact} = \\text{Surviving Code Footprint} \\times \\text{Architectural Quality Multiplier (0.2x to 2.0x)}$$\n")
+
+    md.append("---\n")
+    md.append("## 5. Methodology & Data Integrity Notes")
     md.append("* **Surviving Lines vs. Raw Logs:** This audit runs `git blame` against the current `HEAD` commit. It discounts transient churn, copy-paste rewrites, and deleted experiments to measure living architectural assets.")
-    md.append("* **Lockfile & Asset Exclusion:** Generated lockfiles (`package-lock.json`), build bundles (`dist/`, `build/`), and third-party vendor libraries are strictly filtered out to prevent artificial inflation.")
-    md.append("* **Tool Reference:** Generated via [`tools/founder_audit.py`](./tools/founder_audit.py). Part of the open-source **Universal Founder Framework**.\n")
+    md.append("* **Lockfile & Asset Exclusion:** Generated lockfiles, build bundles, and third-party vendor libraries are strictly filtered out to prevent artificial inflation.")
+    md.append("* **Multi-Language Engine:** Supports TypeScript, JavaScript, Python, Go, Rust, C#, F#, C/C++, Ruby, Java, Kotlin, PHP, Swift, Dart, Elixir, SQL, Terraform, and Markdown.")
+    md.append("* **Reference Framework:** Part of the open-source [Universal Founder Framework](https://github.com/founders-framework).\n")
 
     return "\n".join(md)
 

@@ -34,6 +34,7 @@ graph TD
         CAP["<b>Cap Table & Hybrid Vesting</b><br/>Tranche A/B, cliffs & option pools"]
         CONF["<b>Co-Founder Conflict & Separation</b><br/>Good/Bad Leaver & dead equity cures"]
         DIL["<b>VC Technical Due Diligence</b><br/>Code forensics & IP clean room"]
+        BEST["<b>Programming Best Practices</b><br/>Qualitative impact & 0.2x–2.0x quality multipliers"]
     end
 
     subgraph Legal ["3. Pluggable Day-1 Templates"]
@@ -44,8 +45,8 @@ graph TD
     end
 
     subgraph Automation ["4. AI Agent Skill & Tooling"]
-        SKILL["<b>founder-audit AI Skill</b><br/>Agentic inspection of multi-repo telemetry"]
-        CLI["<b>founder_audit.py CLI</b><br/>Zero-dependency Git forensics & reports"]
+        SKILL["<b>founder-audit AI Skill</b><br/>Multi-language agentic git forensics"]
+        CLI["<b>founder_audit.py CLI</b><br/>Zero-dependency audit tool (C#, Ruby, C++, Go, etc.)"]
     end
 
     Core --> Playbooks
@@ -65,12 +66,13 @@ graph TD
 | **[`playbooks/cap-table-and-vesting.md`](playbooks/cap-table-and-vesting.md)** | Cap table modeling, 15–20% unallocated ESOP reserve, Tranche A runway vs Tranche B milestone triggers, and double-trigger acceleration. |
 | **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
 | **[`playbooks/technical-due-diligence.md`](playbooks/technical-due-diligence.md)** | What top VCs and CTO diligence partners inspect: code health, architecture, security rules, and clean room licensing. |
+| **[`playbooks/programming-best-practices-and-impact-evaluation.md`](playbooks/programming-best-practices-and-impact-evaluation.md)** | **Qualitative Architectural Paradigms**: KISS, DDD layered boundaries, default-deny security, 100% finisher standards, and the **$0.2\times$ to $2.0\times$ Quality Multiplier**. |
 | **[`templates/co-founder-operating-agreement.md`](templates/co-founder-operating-agreement.md)** | Pluggable, ready-to-sign co-founder operating contract with hybrid vesting and STO provisions. |
 | **[`templates/invention-assignment-piia.md`](templates/invention-assignment-piia.md)** | Proprietary Information & Inventions Agreement ensuring corporate ownership and "Zero Hostage Code." |
 | **[`templates/section-83b-election-template.md`](templates/section-83b-election-template.md)** | Model IRS 83(b) election form, certified mail cover letter, and 30-day tracking guide. |
 | **[`templates/quarterly-founder-calibration.md`](templates/quarterly-founder-calibration.md)** | 90-day Founder Calibration Review (FCR) sheet for peer calibration and milestone verification. |
-| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit codebases. |
-| **[`tools/founder_audit.py`](tools/founder_audit.py)** | Standalone, zero-dependency Python CLI tool for multi-repository Git forensics and Markdown/JSON report generation. |
+| **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit multi-language codebases. |
+| **[`tools/founder_audit.py`](tools/founder_audit.py)** | Standalone, zero-dependency Python CLI tool supporting .NET, Ruby, C++, Java, Go, Python, Rust, PHP, Swift, and more. |
 
 ---
 
