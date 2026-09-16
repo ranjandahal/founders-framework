@@ -35,6 +35,7 @@ graph TD
         subgraph Stage1 ["Stage & Governance"]
             STO["<b>Single-Threaded Ownership (STO)</b><br/>Amazon-style decision rights & RACI"]
             CAP["<b>Cap Table & Hybrid Vesting</b><br/>Tranche A/B, cliffs & option pools"]
+            SAFE["<b>SAFE Financing & Dilution</b><br/>Stacking waterfalls & option pool shuffle"]
             CONF["<b>Co-Founder Conflict & Separation</b><br/>Good/Bad Leaver & dead equity cures"]
         end
         subgraph Stage2 ["Validation & GTM"]
@@ -47,6 +48,7 @@ graph TD
             PROD["<b>Product & Outcome-Driven Design</b><br/>Product: AI-first strategy & observability"]
             KILL["<b>Startup Execution Kill Chain</b><br/>Execution: OODA vs F2T2EA & kill criteria"]
             ENG["<b>Programming Best Practices</b><br/>Engineering: 0.2x–2.0x quality multipliers"]
+            DEBT["<b>Tech Debt & Code Forensics</b><br/>Asset creation vs fragile debt lifecycle"]
             DIL["<b>VC Technical Due Diligence</b><br/>Forensics: Code audit & clean room IP"]
         end
     end
@@ -56,6 +58,8 @@ graph TD
         PIIA["<b>Invention Assignment (PIIA)</b><br/>Zero Hostage Code guarantee"]
         TAX["<b>IRS Section 83(b) Package</b><br/>30-day statutory filing guide & letter"]
         FCR["<b>Quarterly Calibration Worksheet</b><br/>90-day radical candor performance review"]
+        FAST["<b>FAST Advisor Agreement</b><br/>2-year vesting with 60-day clawback"]
+        PILOT["<b>Customer Pilot Agreement</b><br/>Paid B2B pilot with auto-conversion"]
     end
 
     subgraph Automation ["4. AI Agent Skill & Tooling"]
@@ -78,6 +82,7 @@ graph TD
 | **[`frameworks/universal-founder-equity-and-operating-framework.md`](frameworks/universal-founder-equity-and-operating-framework.md)** | **Core OS** | Mathematical **5-Factor Dynamic Equity Model** anchored to Economic Scarcity, milestone-driven two-tranche hybrid vesting, and Day-1 legal hygiene. |
 | **[`playbooks/single-threaded-ownership.md`](playbooks/single-threaded-ownership.md)** | **Governance** | Eliminating consensus drag, Amazon Type 1 vs Type 2 decisions, RACI assignments, and the 24-hour review SLA. |
 | **[`playbooks/cap-table-and-vesting.md`](playbooks/cap-table-and-vesting.md)** | **Governance** | Cap table modeling, 15–20% unallocated ESOP reserve, Tranche A runway vs Tranche B milestone triggers, and double-trigger acceleration. |
+| **[`playbooks/safe-financing-and-dilution.md`](playbooks/safe-financing-and-dilution.md)** | **Governance** | **SAFE Financing & Cap Table Dilution**: Post-money SAFE stacking waterfalls, the "option pool shuffle" trap, and the 15% pre-priced dilution ceiling. |
 | **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | **Governance** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
 | **[`playbooks/earned-rights-and-venture-validation.md`](playbooks/earned-rights-and-venture-validation.md)** | **Starting** | **The Earned Rights Principle**: Escaping the "Red Dot", OPPM (One Page Project Manager), extreme uncertainty decision matrix, conative founder instincts, and becoming **Mission-Critical Core**. |
 | **[`playbooks/problem-and-solution-validation.md`](playbooks/problem-and-solution-validation.md)** | **Problem** | Hunting acute agony, Startup Value Chain mapping, Solution First Glance stress-testing, **Minimum Delightful Product (MDP)** loops, the 5 Pillars of user journey, and advisory boards. |
@@ -86,11 +91,14 @@ graph TD
 | **[`playbooks/founder-led-sales-and-pricing.md`](playbooks/founder-led-sales-and-pricing.md)** | **Sales** | 20 daily outbound touches, discovery-to-paid pipeline stages, **Sales Pre-Objections Framework**, Month-2 PMF retention benchmarks, PLG loops, and value-based SaaS pricing. |
 | **[`playbooks/startup-execution-kill-chain.md`](playbooks/startup-execution-kill-chain.md)** | **Execution** | **OODA vs F2T2EA**, the 6 links of the startup kill chain, eliminating the "half-loop" motion theater, pre-commit milestone kill gates, and the fractal operating rhythm. |
 | **[`playbooks/programming-best-practices-and-impact-evaluation.md`](playbooks/programming-best-practices-and-impact-evaluation.md)** | **Engineering** | **Qualitative Architectural Paradigms**: KISS, DDD layered boundaries, default-deny security, 100% finisher standards, and the **$0.2\times$ to $2.0\times$ Quality Multiplier**. |
+| **[`playbooks/technical-debt-lifecycle-and-code-forensics.md`](playbooks/technical-debt-lifecycle-and-code-forensics.md)** | **Engineering** | **Technical Debt Lifecycle & Code Forensics**: Distinguishing visual prototype drag from architectural asset creation, direct DB coupling traps, and refactoring survival ratios. |
 | **[`playbooks/technical-due-diligence.md`](playbooks/technical-due-diligence.md)** | **Forensics** | What top VCs and CTO diligence partners inspect: code health, architecture, security rules, and clean room licensing. |
 | **[`templates/co-founder-operating-agreement.md`](templates/co-founder-operating-agreement.md)** | **Legal** | Pluggable, ready-to-sign co-founder operating contract with hybrid vesting and STO provisions. |
 | **[`templates/invention-assignment-piia.md`](templates/invention-assignment-piia.md)** | **Legal** | Proprietary Information & Inventions Agreement ensuring corporate ownership and "Zero Hostage Code." |
 | **[`templates/section-83b-election-template.md`](templates/section-83b-election-template.md)** | **Legal** | Model IRS 83(b) election form, certified mail cover letter, and 30-day tracking guide. |
 | **[`templates/quarterly-founder-calibration.md`](templates/quarterly-founder-calibration.md)** | **Legal** | 90-day Founder Calibration Review (FCR) sheet for peer calibration and milestone verification. |
+| **[`templates/fast-advisor-agreement.md`](templates/fast-advisor-agreement.md)** | **Legal** | **Founder Advisor Standard Agreement (FAST)**: 24-month vesting, 3-month cliff, quarterly contribution triggers, and 60-day non-responsiveness clawback. |
+| **[`templates/customer-pilot-agreement.md`](templates/customer-pilot-agreement.md)** | **Legal** | **B2B SaaS Customer Pilot Agreement**: Paid evaluation parameters, objective quantitative success criteria, and automatic conversion into annual MSA. |
 | **[`skills/founder-audit/SKILL.md`](skills/founder-audit/SKILL.md)** | **Tooling** | Drop-in AI agent skill for Antigravity, Claude Code, Cursor, and Copilot to autonomously audit multi-language codebases. |
 | **[`tools/founder_audit.py`](tools/founder_audit.py)** | **Tooling** | Standalone, zero-dependency Python CLI tool supporting .NET, Ruby, C++, Java, Go, Python, Rust, PHP, Swift, and more. |
 
