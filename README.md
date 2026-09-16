@@ -15,8 +15,9 @@ Startups rarely die from competitive pressure. They die from **unforced internal
 2. **Consensus Paralysis:** When three people share ownership of a subsystem, **nobody owns it**. Decision velocity slows to a crawl.
 3. **The "Vesting in Sleep" Trap:** Traditional 4-year time-only vesting allows underperforming or disengaged co-founders to collect 25% of the company each year while contributing zero real value.
 4. **The "90% Finisher" Syndrome (*Hatti Chiryo, Pucchar Adkiyo*):** Easily building the initial prototype, but abandoning the grueling last 10%—automated tests, security compliance, deployment edge cases, and production runbooks.
+5. **The Scarcity Delusion (Treating All Contributions as Equally Replaceable):** Failing to differentiate between irreplaceable capabilities that cannot be outsourced (core technical architecture, 100x scalability, pivot adaptability) and hireable skills that can be augmented via specialist consultants or advisory councils.
 
-The **Universal Founder Framework (UFF)** replaces emotional arguments and vague promises with **venture-grade contracts, objective quantitative Git forensics, Single-Threaded Ownership (STO), and AI-assisted audits**.
+The **Universal Founder Framework (UFF)** anchors all governance to the **Economic Scarcity Principle (Irreplaceability vs. Hireability)**, replacing emotional arguments and vague promises with **venture-grade contracts, objective quantitative Git forensics, Single-Threaded Ownership (STO), and AI-assisted audits**.
 
 ---
 
@@ -73,8 +74,8 @@ graph TD
 
 | Directory / File | Paradigm / Scope | Description & Purpose |
 | :--- | :--- | :--- |
-| **[`frameworks/universal-founder-contribution-framework.md`](frameworks/universal-founder-contribution-framework.md)** | **Core OS** | The **6 Pillars of Foundership** (Vision, Technical Mastery, 100% Finisher, High Agency, Leadership, Commercial Scoping), stage weights, and behavioral scoring anchors. |
-| **[`frameworks/universal-founder-equity-and-operating-framework.md`](frameworks/universal-founder-equity-and-operating-framework.md)** | **Core OS** | Mathematical **5-Factor Dynamic Equity Model**, milestone-driven two-tranche hybrid vesting, and legal hygiene. |
+| **[`frameworks/universal-founder-contribution-framework.md`](frameworks/universal-founder-contribution-framework.md)** | **Core OS** | Executive Philosophy, **The Weighting Rationale (Irreplaceability vs. Hireability)**, the **6 Pillars of Foundership**, dynamic stage weights, and behavioral scoring anchors. |
+| **[`frameworks/universal-founder-equity-and-operating-framework.md`](frameworks/universal-founder-equity-and-operating-framework.md)** | **Core OS** | Mathematical **5-Factor Dynamic Equity Model** anchored to Economic Scarcity, milestone-driven two-tranche hybrid vesting, and Day-1 legal hygiene. |
 | **[`playbooks/single-threaded-ownership.md`](playbooks/single-threaded-ownership.md)** | **Governance** | Eliminating consensus drag, Amazon Type 1 vs Type 2 decisions, RACI assignments, and the 24-hour review SLA. |
 | **[`playbooks/cap-table-and-vesting.md`](playbooks/cap-table-and-vesting.md)** | **Governance** | Cap table modeling, 15–20% unallocated ESOP reserve, Tranche A runway vs Tranche B milestone triggers, and double-trigger acceleration. |
 | **[`playbooks/co-founder-conflict-resolution.md`](playbooks/co-founder-conflict-resolution.md)** | **Governance** | Resolving dysfunction early, Good Leaver vs Bad Leaver provisions, company share repurchase options, and curing "dead equity." |
