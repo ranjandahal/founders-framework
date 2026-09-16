@@ -40,15 +40,18 @@ This framework synthesizes best practices from top venture accelerators (Y Combi
 
 ## 2. The 5-Factor Dynamic Equity Allocation Model
 
-Instead of guessing equity percentages, founding teams evaluate each member across **five weighted value drivers**:
+Instead of guessing equity percentages based on casual negotiations, founding teams evaluate each member across **five weighted value drivers**. 
+
+> **The Weighting Rationale (Irreplaceability vs. Hireability):**  
+> As established in the **[Universal Founder Contribution Framework (UFCF §2)](./universal-founder-contribution-framework.md#2-the-weighting-rationale-irreplaceability-vs-hireability)**, weights are governed by the **Economic Scarcity Principle**. Architecture, first-principles technical IP, and full-time risk absorption cannot be outsourced to agencies; domain knowledge and niche workflows—while vital for early customer grounding—can be augmented via specialist consultants and advisory councils.
 
 ```mermaid
-pie title Dynamic Founder Equity Weighting Breakdown
-    "1. Core Architecture & IP Creation" : 30
-    "2. Full-Time Commitment & Risk Absorption" : 25
-    "3. Commercialization, Capital & Sales" : 20
-    "4. Domain & Technical Authority" : 15
-    "5. Inception & Thesis Genesis" : 10
+pie title Dynamic Founder Equity Weighting Breakdown (Irreplaceability vs. Hireability)
+    "1. Core Architecture & IP Creation (Irreplaceable)" : 30
+    "2. Full-Time Commitment & Risk Absorption (High Scarcity)" : 25
+    "3. Commercialization, Capital & Sales (High Scarcity)" : 20
+    "4. Domain & Technical Authority (Hireable/Augmentable)" : 15
+    "5. Inception & Thesis Genesis (One-Time Catalyst)" : 10
 ```
 
 ---
